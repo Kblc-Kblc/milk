@@ -50,6 +50,7 @@ export default {};
   display: flex;
   justify-content: space-between;
   &__item {
+    display: inline-block;
     font-family: Open Sans;
     font-style: normal;
     font-weight: normal;
@@ -59,6 +60,25 @@ export default {};
     text-transform: uppercase;
 
     color: #494949;
+
+    display: inline-block;
+    position: relative;
+    &:after {
+      background: none repeat scroll 0 0 transparent;
+      bottom: 0;
+      content: "";
+      display: block;
+      height: 2px;
+      left: 50%;
+      position: absolute;
+      background: #494949;
+      transition: width 0.3s ease 0s, left 0.3s ease 0s;
+      width: 0;
+    }
+    &:hover:after {
+      width: 100%;
+      left: 0;
+    }
   }
 }
 </style>

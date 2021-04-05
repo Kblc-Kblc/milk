@@ -199,6 +199,9 @@ export default {};
     border: 2px solid rgba(0, 0, 0, 0.1);
     border-radius: 10px;
     padding: 0px 15px;
+    &:focus {
+      border: 2px solid #c9d6a4;
+    }
   }
 
   &__payment {
